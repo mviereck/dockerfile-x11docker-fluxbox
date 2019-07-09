@@ -16,7 +16,7 @@
 #
 # See x11docker --help for further options.
 
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \

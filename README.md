@@ -1,6 +1,6 @@
 # x11docker/fluxbox
 
-Quite small base image with fluxbox window manager on debian stretch
+Quite small base image with fluxbox window manager on Debian.
  - Run fluxbox in docker.
  - Use x11docker to run GUI applications and desktop environments in docker images.
  - Get [x11docker from github](https://github.com/mviereck/x11docker)
