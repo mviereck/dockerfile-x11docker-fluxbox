@@ -8,22 +8,14 @@
 # Examples: x11docker --desktop x11docker/fluxbox
 #           x11docker x11docker/lxde eterm
 #
-# Options:
-# Persistent home folder stored on host with   --home
-# Shared host folder with                      --sharedir DIR
-# Clipboard sharing with option                --clipboard
-# Sound support with option                    --alsa
-#
 # See x11docker --help for further options.
 
 FROM debian:buster-slim
 
-ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y --no-install-recommends \
-      fluxbox eterm && \
+    env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+      fluxbox \
+      eterm && \
     rm -rf /var/lib/apt/lists/*
-ENV DEBIAN_FRONTEND newt
 
 CMD fluxbox
